@@ -1,0 +1,4 @@
+﻿category spawner
+
+loop 100,make regular 6 0,modify 0 133,0.05
+destroy

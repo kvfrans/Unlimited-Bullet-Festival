@@ -3,23 +3,42 @@ sprite fireboss
 set speed 0
 delay 0.3
 
-set x 10
-make spindelayspawner 0 0
+// set x 10
+// make spindelayspawner 0 0
 
-set x -10
-make spindelayspawner 0 0
+// set x -10
+// make spindelayspawner 0 0
 
+// set x 0
+// make spindelayspawner 0 0
+
+// delay 10
+// clear
+
+// set x 10
+// make spinslowthenfastspawner 0 0
+
+// set x -10
+// make spinslowthenfastspawner 0 0
+
+// set x 0
+// make spinslowthenfastspawner 0 0
+
+set y -10
+set x -14
+make spininsidespawner 0 0
+
+set y -10
+set x 14
+make spininsidespawner 0 0
+
+set y 12
+set x -14
+make spininsidespawner 0 0
+
+set y 12
+set x 14
+make spininsidespawner 0 0
+
+set y 9
 set x 0
-make spindelayspawner 0 0
-
-delay 3
-clear
-
-set x 10
-make spinslowthenfastspawner 0 0
-
-set x -10
-make spinslowthenfastspawner 0 0
-
-set x 0
-make spinslowthenfastspawner 0 0
