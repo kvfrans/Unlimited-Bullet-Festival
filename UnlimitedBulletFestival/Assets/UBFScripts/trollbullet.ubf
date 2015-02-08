@@ -1,0 +1,5 @@
+﻿set direction 270
+delay 1
+add speed 50
+delay 1
+minus speed 50

@@ -1,0 +1,5 @@
+﻿set speed 5
+loop 20,make firecharge 0 0,modify 0 18,0
+delay .1
+destroy
+set speed 0

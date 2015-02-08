@@ -1,0 +1,53 @@
+﻿category boss
+sprite fireboss
+set speed 0
+delay 0.3
+loop 40,make firecharge 1 0,modify 0.5 10,0.01
+delay .5
+clear
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+make fastbullet 0 270
+clear
+delay .5
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+make trollbullet 0 270
+delay .4
+loop 40,make firecharge 1 0,modify 0.5 10,0.01
+delay 2
+clear
+delay .4
+loop 40,make firecharge 1 0,modify 1 -10,0.01
+delay 3
+clear
+delay 4
+loop 300, set x-5. modify 0.01, 0.03
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+category boss
+sprite fireboss
+set speed 0
+delay 0.3
+set x-5
+make firechargerespawn 0 0
+make firechargerespawn 0 90
+make firechargerespawn 0 180
+make firechargerespawn 0 270
+delay 1
+
+
+
+
+

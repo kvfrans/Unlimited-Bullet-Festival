@@ -1,0 +1,4 @@
+﻿set speed 5
+delay .5
+set speed 0
+delay .5
