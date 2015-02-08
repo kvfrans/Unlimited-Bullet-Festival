@@ -1,0 +1,12 @@
+﻿sprite fireboss
+set speed 0
+delay 0.3
+make firework 0 0
+delay 0.3
+make firework 0 0
+delay 0.3
+make firework 0 0
+delay 0.3
+make firework 0 0
+delay 0.3
+make firework 0 0

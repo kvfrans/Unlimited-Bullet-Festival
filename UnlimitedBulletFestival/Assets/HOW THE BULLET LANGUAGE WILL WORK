@@ -1,0 +1,24 @@
+HOW THE BULLET LANGUAGE WILL WORK
+
+ex:
+
+//set: sets a value
+set direction 15
+
+//values:
+direction, speed, size, x, y
+
+//delay: delay for milliseconds
+delay 1000
+
+//make: makes a bullet with speed direction
+make energyorb 10 90
+
+//effect: play effect
+effect flashscreen
+
+//loop:
+loop 4,make energyorb 10 90,modify 5 10
+
+//add: add to a value
+add direction 10
