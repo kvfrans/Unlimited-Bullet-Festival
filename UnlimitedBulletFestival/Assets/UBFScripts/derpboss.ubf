@@ -1,0 +1,15 @@
+﻿sprite fireboss
+set speed 0
+delay 0.3
+loop 40,make firecharge 1 0,modify 1 10
+loop 40,make firecharge 2 0,modify 2 10
+loop 40,make firecharge 3 0,modify 3 10
+loop 40,make firecharge 3 0,modify 3 10
+loop 40,make firecharge 3 0,modify 3 10
+loop 40,make firecharge 3 10,modify 3 10
+loop 40,make firecharge 3 10,modify 3 10
+loop 40,make firecharge 2 10,modify 2 10
+loop 40,make firecharge 1 10,modify 1 10
+
+
+

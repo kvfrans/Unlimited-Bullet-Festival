@@ -1,11 +1,2 @@
-﻿// make firecharge 3 0
-// make firecharge 3 45
-// make firecharge 3 90
-// make firecharge 3 135
-// make firecharge 3 180
-// make firecharge 3 225
-// make firecharge 3 270
-// make firecharge 3 315
-
-loop 40,make firecharge 3 0,modify 0 10
+﻿loop 40,make firecharge 3 0,modify 0 10
 destroy
