@@ -1,4 +1,5 @@
-﻿delay 1
+﻿category bullet
+delay 1
 add rotation 15
 delay 1
 add rotation 15

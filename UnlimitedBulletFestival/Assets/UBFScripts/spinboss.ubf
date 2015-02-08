@@ -1,4 +1,5 @@
-﻿sprite fireboss
+﻿category boss
+sprite fireboss
 set speed 0
 delay 0.3
 
@@ -10,3 +11,15 @@ make spindelayspawner 0 0
 
 set x 0
 make spindelayspawner 0 0
+
+delay 3
+clear
+
+set x 10
+make spinslowthenfastspawner 0 0
+
+set x -10
+make spinslowthenfastspawner 0 0
+
+set x 0
+make spinslowthenfastspawner 0 0

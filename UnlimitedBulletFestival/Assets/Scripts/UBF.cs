@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class UBF : MonoBehaviour {
 
 	public string scriptname;
+	public string category;
 
 	private Transform dm;
 	private List<string> commands;
@@ -95,6 +96,20 @@ public class UBF : MonoBehaviour {
 		else if(parts[0] == "destroy")
 		{
 			Destroy(gameObject);
+		}
+		else if(parts[0] == "clear")
+		{
+			foreach(GameObject go in GameObject.FindGameObjectsWithTag("UBF"))
+			{
+				if(go.GetComponent<UBF>().category == "bullet")
+				{
+					Destroy(go);
+				}
+			}
+		}
+		else if(parts[0] == "category")
+		{
+			category = parts[1];
 		}
 		else if(parts[0] == "sprite")
 		{

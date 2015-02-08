@@ -1,0 +1,2 @@
+﻿loop 100,make spinslowthenfast 10 270,modify 0 170,0.01
+destroy
