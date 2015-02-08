@@ -1,0 +1,11 @@
+﻿category bullet
+add rotation 15
+delay 0.3
+add speed -5
+delay 0.3
+add rotation 15
+set speed 0
+delay 0.5
+add rotation 15
+add rotation 180
+set speed 10

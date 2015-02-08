@@ -1,8 +1,8 @@
 ﻿delay 0.5
-add speed -5
+add speed -4
 delay 0.5
-add speed -5
+add speed -4
 delay 0.5
-set speed 0
+set speed 3
 delay 0.5
 add speed 20

@@ -1,0 +1,5 @@
+﻿set speed 3
+set direction 270
+delay 1
+loop 120,make regular 3 0,modify 0 173,0.01
+destroy

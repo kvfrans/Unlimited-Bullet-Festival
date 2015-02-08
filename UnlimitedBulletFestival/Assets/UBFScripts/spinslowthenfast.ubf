@@ -1,9 +1,9 @@
 ﻿category bullet
 delay 0.5
-add speed -5
+add speed -4
 delay 0.5
-add speed -5
+add speed -4
 delay 0.5
 set speed 0
 delay 0.5
-add speed 20
+add speed 10

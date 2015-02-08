@@ -25,6 +25,9 @@ public class UBF : MonoBehaviour {
 
 	float ExecuteLine(string toexecute)
 	{
+
+		// Debug.Log(toexecute);
+
 		string[] lineandmod = toexecute.Split(',');
 		string line = lineandmod[0];
 		// string xyz = "string1 string2 string3";
@@ -78,7 +81,7 @@ public class UBF : MonoBehaviour {
 			}
 			else if(parts[1] == "y")
 			{
-				transform.position = new Vector2(transform.position.x,float.Parse(parts[2] + transform.position.y));
+				transform.position = new Vector2(transform.position.x,transform.position.y + float.Parse(parts[2]));
 			}
 		}
 		else if(parts[0] == "delay")
@@ -92,6 +95,50 @@ public class UBF : MonoBehaviour {
 			ubf.GetComponent<MoveScript>().speed = float.Parse(parts[2]);
 			ubf.GetComponent<MoveScript>().angle = float.Parse(parts[3]);
 			ubf.transform.position = transform.position;
+
+			SoundEffectsHelper.Instance.MakeExplosionSound();
+		}
+		else if(parts[0] == "effect")
+		{
+			// Debug.Log("effects");
+			if(parts[1] == "flash")
+			{
+				dm.GetComponent<GUIStuff>().greenness = 1;
+			}
+			if(parts[1] == "circlecombo")
+			{
+				for(int i = 0; i < 50; i++)
+				{
+					Debug.Log("asdasd");
+					StartCoroutine(ExecuteDelay("effect circlein",i*0.005f));
+					// Debug.Log
+				}
+			}
+			if(parts[1] == "circlein")
+			{
+				Debug.Log("sdss");
+				// dm.GetComponent<GUIStuff>().greenness = 1;
+
+					var ubf = Instantiate(Resources.Load<Transform>("Magic Circle")) as Transform;
+					Vector2 temp = GetXYDirection(Mathf.Deg2Rad*Random.value*360,10);
+					ubf.transform.position = transform.position + new Vector3(temp.x,temp.y,0);
+				// }
+			}
+			if(parts[1] == "bigcircle")
+			{
+				Debug.Log("ho");
+				var ubf = Instantiate(Resources.Load<Transform>("Magic Circle Big")) as Transform;
+					ubf.transform.position = transform.position;
+			}
+			if(parts[1] == "illuminati")
+			{
+				for(int i = 0; i < 50; i++)
+				{
+					Debug.Log("asdasd");
+					StartCoroutine(ExecuteDelay("effect tri",i*0.05f));
+					// Debug.Log
+				}
+			}
 		}
 		else if(parts[0] == "destroy")
 		{
@@ -101,8 +148,10 @@ public class UBF : MonoBehaviour {
 		{
 			foreach(GameObject go in GameObject.FindGameObjectsWithTag("UBF"))
 			{
-				if(go.GetComponent<UBF>().category == "bullet")
+				if(go.GetComponent<UBF>().category == "bullet" || go.GetComponent<UBF>().category == "spawner")
 				{
+					var point = Instantiate(Resources.Load<Transform>("ScorePoint")) as Transform;
+					point.position = go.transform.position;
 					Destroy(go);
 				}
 			}
@@ -118,7 +167,7 @@ public class UBF : MonoBehaviour {
 			Sprite spr = Sprite.Create(text,new Rect(0,0,text.width,text.height),new Vector2(0.5f,0.5f),1);
 			GetComponent<SpriteRenderer>().sprite = spr;
 		}
-		if(parts[0] == "loop")
+		else if(parts[0] == "loop")
 		{
 			// Debug.Log(lineandmod[0] + " ... " + lineandmod[1]);
 			if(lineandmod.Length == 2)
@@ -150,7 +199,18 @@ public class UBF : MonoBehaviour {
 					// Debug.Log(newcommand);
 					StartCoroutine(ExecuteDelay(newcommand,float.Parse(lineandmod[3])*i));
 				}
-				delay = float.Parse(lineandmod[3])*int.Parse(parts[1]);
+				if(lineandmod.Length == 4)
+					delay = float.Parse(lineandmod[3])*int.Parse(parts[1]);
+			}
+		}
+		else if(parts[0] == "cutscene")
+		{
+			Time.timeScale = 0;
+			dm.GetComponent<GUIStuff>().cuttext = parts[1].Replace("-"," ");
+
+			if(parts.Length == 3)
+			{
+				dm.GetComponent<GUIStuff>().hero = parts[2];
 			}
 		}
 
@@ -169,6 +229,52 @@ public class UBF : MonoBehaviour {
 			ubf.GetComponent<MoveScript>().speed = float.Parse(parts[2]);
 			ubf.GetComponent<MoveScript>().angle = float.Parse(parts[3]);
 			ubf.transform.position = transform.position;
+
+			SoundEffectsHelper.Instance.MakeExplosionSound();
+		}
+		if(parts[0] == "set")
+		{
+			//set a value
+			if(parts[1] == "speed")
+			{
+				GetComponent<MoveScript>().speed = float.Parse(parts[2]);
+			}
+			else if(parts[1] == "direction")
+			{
+				GetComponent<MoveScript>().angle = float.Parse(parts[2]);
+			}
+			else if(parts[1] == "size")
+			{
+				float size = float.Parse(parts[2]);
+				transform.localScale = new Vector3(size/10.0f,size/10.0f,size/10.0f);
+			}
+			else if(parts[1] == "x")
+			{
+				transform.position = new Vector2(float.Parse(parts[2]),transform.position.y);
+			}
+			else if(parts[1] == "y")
+			{
+				transform.position = new Vector2(transform.position.x,float.Parse(parts[2]));
+			}
+		}
+		else if(parts[0] == "effect")
+		{
+			if(parts[1] == "circlein")
+			{
+				// Debug.Log("lel");
+					var ubf = Instantiate(Resources.Load<Transform>("Magic Circle")) as Transform;
+					Vector2 temp = GetXYDirection(Mathf.Deg2Rad*Random.value*360,10);
+					ubf.transform.position = transform.position + new Vector3(temp.x,temp.y,0);
+				// }
+			}
+			if(parts[1] == "tri")
+			{
+				// Debug.Log("lel");
+					var ubf = Instantiate(Resources.Load<Transform>("Triangle")) as Transform;
+					ubf.transform.position = new Vector3(Random.value*10 - 5,-11,0);
+					ubf.GetComponent<MoveScript>().angle = 50 + Random.value*80;
+				// }
+			}
 		}
     }
 
@@ -181,5 +287,11 @@ public class UBF : MonoBehaviour {
 			float delay = ExecuteLine(line);
 			yield return new WaitForSeconds(delay);
 		}
+	}
+
+
+	public Vector2 GetXYDirection(float angle, float magnitude)
+	{
+		return new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * magnitude;
 	}
 }

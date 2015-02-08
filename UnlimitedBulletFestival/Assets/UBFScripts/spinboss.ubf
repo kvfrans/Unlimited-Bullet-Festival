@@ -1,28 +1,49 @@
 ﻿category boss
 sprite fireboss
 set speed 0
-delay 0.3
+set size 0.5
 
-// set x 10
-// make spindelayspawner 0 0
 
-// set x -10
-// make spindelayspawner 0 0
 
-// set x 0
-// make spindelayspawner 0 0
+delay 0.1
 
-// delay 10
-// clear
+cutscene hi mc
 
-// set x 10
+delay 0.1
+effect circlecombo
+effect illuminati
+
+set x 10
+make spindelayspawner 0 0
+
+set x -10
+make spindelayspawner 0 0
+
+set x 0
+make spindelayspawner 0 0
+
+delay 6
+clear
+effect flash
+
+
+
+effect circlecombo
+
+set x 10
+make spinslowthenfastspawner 0 0
+
+set x -10
+make spinslowthenfastspawner 0 0
+
+set x 0
 // make spinslowthenfastspawner 0 0
 
-// set x -10
-// make spinslowthenfastspawner 0 0
+delay 5
+clear
+effect flash
 
-// set x 0
-// make spinslowthenfastspawner 0 0
+effect bigcircle
 
 set y -10
 set x -14
@@ -42,3 +63,100 @@ make spininsidespawner 0 0
 
 set y 9
 set x 0
+delay 4
+clear
+effect flash
+
+cutscene hero:-hah-that-isnt-enough-to-stop-me
+
+cutscene mean-guy:-fine-then-face-my-special-attack
+
+effect bigcircle
+
+set x 10
+make spinspiralspawner 0 0
+
+set x -10
+make spinspiralspawner 0 0
+
+set x 0
+
+delay 5
+clear
+effect flash
+
+make spinspiralspawnerbig 0 0
+set x -5
+
+delay 3
+clear
+effect flash
+
+effect circlecombo
+delay 0.3
+
+cutscene w4h4h4h4h4h4-you-will-never-beat-my-secret-trap-card-hueeuheuheuheuehuehueh
+
+loop 100,make card 3 0,modify 0 3,0.1,nodelay
+loop 100,make card2 4 10,modify 0 3,0.1,nodelay
+loop 100,make card3 5 20,modify 0 3,0.1,nodelay
+
+loop 100,make card 3 120,modify 0 3,0.1,nodelay
+loop 100,make card2 4 130,modify 0 3,0.1,nodelay
+loop 100,make card3 5 140,modify 0 3,0.1,nodelay
+
+loop 100,make card 3 240,modify 0 3,0.1 ,nodelay
+loop 100,make card2 4 250,modify 0 3,0.1 ,nodelay
+loop 100,make card3 5 260,modify 0 3,0.1 ,nodelay
+
+delay 1
+
+loop 300,set x -5,modify 0.01,0.03,nodelay
+
+delay 9
+clear
+effect flash
+
+effect circlecombo
+effect illuminati
+
+loop 100,make regular 5 0,modify 0 6,0.1,nodelay
+loop 100,make regular 5 72,modify 0 6,0.1,nodelay
+loop 100,make regular 5 144,modify 0 6,0.1,nodelay
+loop 100,make regular 5 216,modify 0 6,0.1,nodelay
+loop 100,make regular 5 288,modify 0 6,0.1,nodelay
+
+loop 100,make card 5 120,modify 0 -10,0.1,nodelay
+loop 100,make card2 5 240,modify 0 -10,0.1,nodelay
+loop 100,make card3 5 0,modify 0 -10,0.1
+
+effect circlecombo
+
+
+// delay 3
+
+
+
+set y 7
+set x 0
+loop 60,make circleback 10 0,modify 0 6,0,nodelay
+
+set x 0
+set y 9
+
+delay 4
+clear
+effect flash
+cutscene face-my-epic-attack!!!
+
+
+loop 120,make multiply 10 0,modify 0 6,0.01,nodelay
+
+delay 3
+
+effect circlecombo
+effect illuminati
+effect bigcircle
+
+loop 40,make sunflowerfirecharge 1 0,modify 0 10,0.0
+

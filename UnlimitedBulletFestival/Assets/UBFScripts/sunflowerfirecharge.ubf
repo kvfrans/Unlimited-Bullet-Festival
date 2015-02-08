@@ -1,0 +1,12 @@
+﻿set speed 5
+delay 0.125
+add rotation 20
+delay 0.125
+add rotation 20
+delay 0.125
+add rotation 20
+delay 0.625
+set speed 2
+delay 1
+add rotation 180
+set speed 10

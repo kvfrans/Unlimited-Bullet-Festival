@@ -1,0 +1,4 @@
+﻿category bullet
+delay 1
+loop 8,make regular 3 0,modify 1 90,0
+destroy
