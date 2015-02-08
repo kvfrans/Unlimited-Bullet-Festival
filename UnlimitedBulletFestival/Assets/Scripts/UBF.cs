@@ -133,13 +133,29 @@ public class UBF : MonoBehaviour {
 					}
 
 					// Debug.Log(newcommand);
-					ExecuteLine(newcommand);
+					StartCoroutine(ExecuteDelay(newcommand,float.Parse(lineandmod[3])*i));
 				}
+				delay = float.Parse(lineandmod[3])*int.Parse(parts[1]);
 			}
 		}
 
 		return delay;
 	}
+
+
+	IEnumerator ExecuteDelay(string command, float delay)
+    {
+    	string[] parts = command.Split(' ');
+    	yield return new WaitForSeconds(delay);
+        if(parts[0] == "make")
+		{
+			var ubf = Instantiate(Resources.Load<Transform>("UBF")) as Transform;
+			ubf.GetComponent<UBF>().scriptname = parts[1];
+			ubf.GetComponent<MoveScript>().speed = float.Parse(parts[2]);
+			ubf.GetComponent<MoveScript>().angle = float.Parse(parts[3]);
+			ubf.transform.position = transform.position;
+		}
+    }
 
 
 	IEnumerator ParseCommand()

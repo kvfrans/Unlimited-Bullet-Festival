@@ -1,0 +1,12 @@
+﻿sprite fireboss
+set speed 0
+delay 0.3
+
+set x 10
+make spindelayspawner 0 0
+
+set x -10
+make spindelayspawner 0 0
+
+set x 0
+make spindelayspawner 0 0

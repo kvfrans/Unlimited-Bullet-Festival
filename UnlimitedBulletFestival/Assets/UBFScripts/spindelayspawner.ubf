@@ -1,0 +1,19 @@
+﻿loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+loop 4,make regular 6 0,modify 0 90,0
+delay 0.2
+
+loop 100,make regular 6 0,modify 0 91,0.05
+destroy
