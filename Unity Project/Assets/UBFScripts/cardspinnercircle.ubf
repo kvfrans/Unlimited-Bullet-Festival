@@ -1,0 +1,6 @@
+﻿category spawner
+set speed 0
+loop 36,make card 3 0,modify 0 10,00,nodelay
+loop 36,make card2 4 10,modify 0 10,00,nodelay
+loop 36,make card3 5 20,modify 0 10,00
+destroy

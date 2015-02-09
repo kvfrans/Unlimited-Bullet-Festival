@@ -1,0 +1,6 @@
+﻿delay 2
+set speed 3
+delay 0.5
+set speed 5
+delay 0.5
+set speed 7

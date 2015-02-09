@@ -1,0 +1,9 @@
+﻿category spawner
+
+loop 10,make stopthengo 0 0,modify 0 36,0.1
+
+add rotation 150
+loop 10,make stopthengo 0 0,modify 0 36,0.1
+
+add rotation 150
+loop 10,make stopthengo 0 0,modify 0 36,0.1
