@@ -7,11 +7,11 @@ set size 0.5
 
 
 
-cutscene what-are-you-doing-here meanie
+//cutscene what-are-you-doing-here meanie
 delay 0.1
-cutscene im-here-to-defeat-you mc
+//cutscene im-here-to-defeat-you mc
 delay 0.1
-cutscene come-at-me meanie
+//cutscene come-at-me meanie
 
 
 delay 0.1
